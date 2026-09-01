@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+APP_PATH="/var/jb/Applications/RepoTransphereTool.app"
+
+UICACHE=""
+if [ -x /var/jb/usr/bin/uicache ]; then
+	UICACHE="/var/jb/usr/bin/uicache"
+elif command -v uicache >/dev/null 2>&1; then
+	UICACHE="$(command -v uicache)"
+fi
+
+if [ -n "$UICACHE" ]; then
+	"$UICACHE" -p "$APP_PATH" || "$UICACHE"
+fi
+
+exit 0

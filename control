@@ -1,0 +1,9 @@
+Package: com.qcom-toolbox.repo-transphere-tool
+Name: Repo Transphere Tool
+Version: 1.10
+Architecture: iphoneos-arm64
+Description: Export Sileo's configured repos from one device and import them on another, additive only.
+Maintainer: qcom-toolbox
+Author: qcom-toolbox
+Section: Utilities
+Depends: firmware (>= 15.0)
